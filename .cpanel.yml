@@ -1,0 +1,18 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/averywh0/public_html/awwlegal.com/projects
+ - /bin/cp -R /home/averywh0/repositories/dotproject/deployed/* $DEPLOYPATH
+ - /bin/rm -R $DEPLOYPATH/install/
+ - export DEPLOYPATH2=/home/averywh0/public_html/dotproject
+ - /bin/cp -R /home/averywh0/repositories/dotproject/deployed/* $DEPLOYPATH2
+ - /bin/rm -R $DEPLOYPATH2/install/
+ #- export DEPLOYPATH3=/home/averywh0/public_html/WEBSITELOCATION
+ #- /bin/cp -R /home/averywh0/repositories/PROGRAM/BRANCH/* $DEPLOYPATH3
+ #- /bin/rm -R $DEPLOYPATH3/install/
+ #This is a cpanel.yml file for the hosted websites of Nathan Winesett
+ #using a shared cpanel hosting package through Westhost.com.  This file
+ #allows me to push my Github commits to the repository saved using
+ #cPanel's Git Version Control and automatically deploy the changes
+ #to the website.  When I have multiple installations, I can use
+ #one repository to deploy to multiple websites using multiple DEPLOYPATHs
